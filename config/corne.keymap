@@ -19,6 +19,12 @@
             slow-release;
             layers = <2>;
         };
+
+        bootloader {
+            bindings = <&bootloader>;
+            key-positions = <24 0>;
+            timeout-ms = <300>;
+        };
     };
 
     behaviors {
@@ -69,10 +75,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp N1  &kp N2        &kp N3        &kp N4        &kp N5            &kp N6    &kp N7    &kp N8        &kp N9     &kp N0  &kp BSPC
-&trans     &trans  &trans        &trans        &trans        &trans            &kp LEFT  &kp DOWN  &kp UP        &kp RIGHT  &trans  &trans
-&kp LCTRL  &trans  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR_ALL    &trans    &trans    &trans        &trans     &trans  &trans
-                                 &kp LGUI      &trans        &kp SPACE         &kp RET   &trans    &kp LEFT_ALT
+&kp TAB    &kp N1  &kp N2        &kp N3        &kp N4        &kp N5            &kp N6   &kp N7  &kp N8        &kp N9  &kp N0  &kp BSPC
+&trans     &trans  &trans        &trans        &trans        &trans            &trans   &trans  &trans        &trans  &trans  &trans
+&kp LCTRL  &trans  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR_ALL    &trans   &trans  &trans        &trans  &trans  &trans
+                                 &kp LGUI      &trans        &kp SPACE         &kp RET  &trans  &kp LEFT_ALT
             >;
         };
 
@@ -93,9 +99,9 @@
 
         nav_layer {
             bindings = <
-&trans  &kp F12  &kp F9  &kp F8  &kp F7  &trans    &kp PAGE_UP    &trans    &kp UP    &trans     &kp DELETE  &kp PRINTSCREEN
-&trans  &kp F11  &kp F6  &kp F5  &kp F4  &trans    &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp INSERT  &kp RET
-&trans  &kp F10  &kp F3  &kp F2  &kp F1  &trans    &trans         &trans    &trans    &trans     &trans      &to 0
+&trans  &kp F12  &kp F9  &kp F8  &kp F7  &trans    &kp PAGE_UP    &trans    &kp UP    &trans     &kp PRINTSCREEN  &kp DELETE
+&trans  &kp F11  &kp F6  &kp F5  &kp F4  &trans    &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp INSERT       &kp RET
+&trans  &kp F10  &kp F3  &kp F2  &kp F1  &trans    &trans         &trans    &kp HOME  &kp END    &trans           &to 0
                          &trans  &trans  &trans    &trans         &trans    &trans
             >;
         };
