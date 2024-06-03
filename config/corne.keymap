@@ -28,14 +28,14 @@
         };
 
         sysreset_left {
-            bindings = <&none>;
+            bindings = <&sys_reset>;
             key-positions = <12>;
             timeout-ms = <400>;
             layers = <3>;
         };
 
         sysreset_right {
-            bindings = <&none>;
+            bindings = <&sys_reset>;
             key-positions = <23>;
             timeout-ms = <400>;
             layers = <3>;
