@@ -25,6 +25,12 @@
             key-positions = <24 0>;
             timeout-ms = <300>;
         };
+
+        sysreset {
+            bindings = <&sys_reset>;
+            key-positions = <12>;
+            timeout-ms = <300>;
+        };
     };
 
     behaviors {
