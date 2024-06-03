@@ -22,14 +22,23 @@
 
         bootloader {
             bindings = <&bootloader>;
-            key-positions = <24 0>;
+            key-positions = <24 35>;
             timeout-ms = <300>;
+            layers = <3>;
         };
 
-        sysreset {
-            bindings = <&sys_reset>;
+        sysreset_left {
+            bindings = <&none>;
             key-positions = <12>;
-            timeout-ms = <300>;
+            timeout-ms = <400>;
+            layers = <3>;
+        };
+
+        sysreset_right {
+            bindings = <&none>;
+            key-positions = <23>;
+            timeout-ms = <400>;
+            layers = <3>;
         };
     };
 
