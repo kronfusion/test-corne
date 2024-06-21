@@ -32,6 +32,11 @@
             key-positions = <14 15 16>;
             timeout-ms = <150>;
         };
+
+        default_layer_combo {
+            bindings = <&to 0>;
+            key-positions = <19 16>;
+        };
     };
 
     behaviors {
@@ -117,7 +122,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans        &trans          &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR_ALL  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans        &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans        &trans          &to 0
                         &trans  &trans  &trans    &trans  &trans        &trans
             >;
         };
