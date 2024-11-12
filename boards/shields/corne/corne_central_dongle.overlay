@@ -19,7 +19,8 @@
 
 / {
     chosen {
-        zmk,kscan = &kscan0;
+        zephyr,display = &oled;
+        zmk,kscan = &mock_kscan;
         zmk,physical-layout = &foostan_corne_6col_layout;
     };
 
@@ -67,11 +68,22 @@ RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9) RC(2,10
             ;
     };
     */
+
+    mock_kscan: kscan_0 {
+        compatible = "zmk,kscan-mock";
+        // wakeup-source;
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
+    // TODO: per-key RGB node(s)?
 };
 
+
+// 128x64 OLED
 &xiao_i2c {
     status = "okay";
-    
+
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
         reg = <0x3c>;
@@ -86,4 +98,4 @@ RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9) RC(2,10
         inversion-on;
         prechargep = <0x22>;
     };
-}; 
+};
