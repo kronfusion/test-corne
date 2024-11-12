@@ -1,4 +1,4 @@
-manifest:
+mamanifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
@@ -15,11 +15,6 @@ manifest:
       import: app/west.yml
       
     # modules
-    - name: zmk-rgbled-widget
-      remote: caksoylar
-      revision: main
-    - name: zmk-tri-state
-      remote: dhruvinsh
       revision: main
     - name: zmk-dongle-display
       remote: englmaxi
